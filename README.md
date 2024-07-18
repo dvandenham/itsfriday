@@ -1,0 +1,2 @@
+# itsfriday
+It's Friday
