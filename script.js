@@ -1,7 +1,7 @@
 function run() {
 	var day = new Date().getDay();
 	var div = document.getElementById("container");
-	if (day === 5) {
+	if (day === 5 || new URLSearchParams(window.location.search).has("force")) {
 		div.innerHTML = `
 		<video autoplay>
 			<source src="vid.webm" type="video/webm">
