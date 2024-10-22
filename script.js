@@ -3,11 +3,12 @@ function run() {
 	var div = document.getElementById("container");
 	if (day === 5 || new URLSearchParams(window.location.search).has("force")) {
 		div.innerHTML = `
-		<video autoplay>
+		<video id="video" autoplay>
 			<source src="vid.webm" type="video/webm">
 			Your browser does not support the video tag.
 		</video>
 		`;
+		setTimeout(function() { document.getElementByID("video").play() }, 500);
 	} else {	
 		var html = `It's `;
 		switch(day) {
