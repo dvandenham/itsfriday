@@ -8,7 +8,7 @@ function run() {
 			Your browser does not support the video tag.
 		</video>
 		`;
-		setTimeout(function() { document.getElementByID("video").play() }, 500);
+		setTimeout(function() { document.getElementById("video").play() }, 500);
 	} else {	
 		var html = `It's `;
 		switch(day) {
