@@ -25,7 +25,7 @@ function run() {
 				html += "thursday";
 				break;
 			case 6:
-				html += "saterday";
+				html += "saturday";
 				break;
 			case 7:
 				html += "sunday";
