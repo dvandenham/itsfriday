@@ -1,14 +1,16 @@
 function run() {
 	var day = new Date().getDay();
 	var div = document.getElementById("container");
-	if (day === 5 || new URLSearchParams(window.location.search).has("force")) {
+	if (day === 5 || new URLSearchParams(window.location.search).has("force") || localStorage.getItem("force")) {
 		div.innerHTML = `
-		<video id="video" autoplay>
+		<video id="video" autoplay muted playsinline>
 			<source src="vid.webm" type="video/webm">
 			Your browser does not support the video tag.
 		</video>
+		<audio id="audio" autoplay controls>
+			<source src="vid.ogg" type="audio/ogg">
+		</audio>
 		`;
-		setTimeout(function() { document.getElementById("video").play() }, 500);
 	} else {	
 		var html = `It's `;
 		switch(day) {
